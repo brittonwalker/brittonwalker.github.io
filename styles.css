@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.peach {
+	background-color: #ffd3c2;
+}
+.yellow {
+	background-color: #ffc150;
+}
+.green {
+	background-color: #ccece9;
+}
+.purple {
+	background-color: #d3d7ee;
+}
+
+h1 {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
