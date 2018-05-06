@@ -1,0 +1,49 @@
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// Components
+// --------------------------------------------------
+
+// Preboot
+@import 'bootstrap';
+
+// Utils
+@import 'app/utils/*';
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// Breakpoint specific styles
+// Screen size variables are defined in variables.less
+// --------------------------------------------------
+
+/**
+ * Mobile and Global styles
+ */
+@import 'app/xs/**/*';
+
+/**
+ * Tablet Styles
+ */
+@media ( min-width: map-get( $grid-breakpoints, sm ) ) {
+	@import 'app/sm/**/*';
+}
+
+/**
+ * Small Desktop Styles
+ */
+@media ( min-width: map-get( $grid-breakpoints, md ) ) {
+  @import 'app/md/**/*';
+}
+
+/**
+ * Desktop Styles
+ */
+@media ( min-width: map-get( $grid-breakpoints, lg ) ) {
+  @import 'app/lg/**/*';
+}
+
+/**
+ * Extra Large Desktop Styles
+ */
+@media ( min-width: map-get( $grid-breakpoints, xl ) ) {
+  @import 'app/xl/**/*';
+}
