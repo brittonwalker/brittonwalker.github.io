@@ -14,7 +14,7 @@ header {
     position: relative;
 
     a {
-        color: $sand;
+        color: #f2f2f2;
     }
 }
 
@@ -40,11 +40,15 @@ header {
 }
 
 .one-logo {
-    width: 75px;
-    color: $sand;
-    fill: #fff;
+    width: 67px;
+    color: #f2f2f2;
+    fill: #f2f2f2;
     opacity: 0;
     z-index: 10;
+}
+
+.one-logo-container {
+    color: #f2f2f2;
 }
 
 img {
