@@ -64,14 +64,22 @@ class Slideshow {
             }
         });
 
+        var canScroll = true;
+
         function navigateSlidesOnScroll (e) {
             e.preventDefault();
-
+            if (canScroll === false) {
+                return;
+            }
             if (slideIndex >= 7) {
                 $('.home-slides').off();
             }
             if (e.originalEvent.deltaY > 0) {
                 $(this).slick('slickNext');
+                canScroll = false;
+                setTimeout( function() {
+                    canScroll = true;
+                }, 2000)
             }
         }
 
