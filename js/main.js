@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import './app/FeaturesSlideshow';
+import './app/RevealHeader';
 import { TweenMax, morphSVG, TimelineLite } from 'gsap';
 
 var step = 0;
@@ -57,7 +58,7 @@ tl.fromTo('.one-logo', 1, {opacity: 0, y: 30}, {opacity: 1, y: 0})
 
 
 
-$('#yo').on('click', function() {
+$('#yo').on('swipe', function() {
 
     // Stop from clicking until animation has completed
     if ( canClick === false ) {

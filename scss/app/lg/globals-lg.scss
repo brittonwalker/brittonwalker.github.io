@@ -1,3 +1,79 @@
 //
 // Desktop styles
 // --------------------------------------------------
+
+.slide-wrap {
+    height: 100vh;
+    padding: 0 0 40px;
+}
+
+.features-slides {
+    height: 100%;
+}
+
+.container {
+    max-width: 1430px;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.slide-sub-heading {
+    font-size: 50px;
+    line-height: 64px;
+}
+
+.slick-list,
+.slick-track,
+.slick-slide {
+    height: 100%;
+}
+
+.slick-slide div:first-of-type {
+    height: 100%;
+}
+
+.desktop-slide-text {
+    max-width: 630px;
+
+    font-size: 26px;
+    line-height: 54px;
+}
+
+.slick-dots {
+    right: 0;
+}
+
+header {
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 100;
+    font-size: 24px;
+    border-bottom: 1px solid #F2F2F2;
+    opacity: 0;
+    transition: opacity .3s ease;
+    padding: 0 20px;
+
+    &.reveal {
+        opacity: 1;
+    }
+
+    .mc-input {
+        max-width: 310px;
+        background-color: transparent;
+        color: #F2F2F2;
+        border-color: #F2F2F2;
+        &::placeholder {
+            color: #F2F2F2;
+        }
+    }
+    .icon-arrow-right {
+        color: #F2F2F2;
+    }
+}
+
+.nav-space-right {
+    margin-right: 70px;
+}
