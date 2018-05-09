@@ -80,7 +80,8 @@ img {
     background-color: #F2F2F2;
     color: $black;
     outline: none;
-    border-bottom: 2px solid $black;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $black;
     min-width: 300px;
     &:focus {
         outline: none;
@@ -430,4 +431,96 @@ svg {
 input {
     border-radius: 0;
     width: 100%;
+}
+
+.mobile-ratio {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: (16 / 9) * 100%;
+    }
+    >.bg-thumb {
+        background-size: 150%;
+    }
+}
+
+
+.bg-thumb {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    transition: opacity 500ms ease;
+    &.loading {
+        opacity: 0;
+    }
+}
+
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.footer-links {
+    a {
+        position: relative;
+        span:before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            transform: scale3d(0, 1, 1);
+            transform-origin: 0% 50%;
+            transition: transform 0.5s;
+            transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+            background: #2d2c2a;
+        }
+        &:hover {
+            color: #2d2c2a;
+            text-decoration: none;
+            span:before {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+    }
+}
+
+.footer-links {
+    a {
+        margin-right: 70px;
+    }
+}
+
+.wallpaper-download-link {
+    a {
+        position: relative;
+        span:before {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            transform: scale3d(0, 1, 1);
+            transform-origin: 0% 50%;
+            transition: transform 0.5s;
+            transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+            background: #fff;
+        }
+        &:hover {
+            color: #F2F2F2;
+            text-decoration: none;
+            span:before {
+                transform: scale3d(1, 1, 1);
+            }
+        }
+    }
 }
