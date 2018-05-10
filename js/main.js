@@ -64,7 +64,7 @@ tl.fromTo('.one-logo', 1, {opacity: 0, y: 30}, {opacity: 1, y: 0})
 
 
 
-$('#yo').on('swipe', function() {
+$('#yo').on('click', function() {
 
     // Stop from clicking until animation has completed
     if ( canClick === false ) {
