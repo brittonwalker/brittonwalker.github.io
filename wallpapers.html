@@ -8,10 +8,22 @@
     <link rel="stylesheet" href="assets/css/site.min.css">
 </head>
 <body>
+<div class="mobile-click-area"></div>
 <header>
-    <div class="spacer-40"></div>
+    <div class="spacer-40 d-none d-lg-block"></div>
+    <div class="spacer-30 d-lg-none"></div>
     <div class="container">
-        <div class="row">
+        <div class="row d-lg-none">
+            <div class="col-12 d-flex justify-content-between">
+                <a href="features.html">
+                    <span>Features</span>
+                </a>
+                <a href="wallpapers.html">
+                    <span>Wallpapers</span>
+                </a>
+            </div>
+        </div>
+        <div class="row d-none d-lg-flex">
             <div class="col-12 col-md-6">
                 <a href="" class="nav-space-right">
                     <span>Download the App</span>
@@ -50,41 +62,52 @@
             </div>
         </div>
     </div>
-    <div class="spacer-40"></div>
+    <div class="spacer-40 d-none d-lg-block"></div>
+    <div class="spacer-30 d-lg-none"></div>
 </header>
     <section class="main slideshow-section">
-        <div class="container d-none d-lg-block">
+        <div class="container d-none d-lg-block" data-animate>
             <div class="row">
                 <div class="col-12">
                     <div class="spacer-40"></div>
-                    <img src="./images/wallpapers/desktop/BG-01.jpg" alt="">
-                    <div class="spacer-20"></div>
-                    <div class="wallpaper-download-link">
-                        <a href="./images/wallpapers/_downloads/desktop/01_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                    <div class="desktop-wallpaper-animate" data-animate>
+                        <img src="./images/wallpapers/desktop/BG-01.jpg" alt="">
+                        <div class="spacer-20"></div>
+                        <div class="wallpaper-download-link">
+                            <a href="./images/wallpapers/_downloads/desktop/01_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                        </div>
                     </div>
                     <div class="spacer-80"></div>
-                    <img src="./images/wallpapers/desktop/BG-02.jpg" alt="">
-                    <div class="spacer-20"></div>
-                    <div class="wallpaper-download-link">
-                        <a href="./images/wallpapers/_downloads/desktop/02_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                    <div class="desktop-wallpaper-animate" data-animate>
+                        <img src="./images/wallpapers/desktop/BG-02.jpg" alt="">
+                        <div class="spacer-20"></div>
+                        <div class="wallpaper-download-link">
+                            <a href="./images/wallpapers/_downloads/desktop/02_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                        </div>
                     </div>
                     <div class="spacer-80"></div>
-                    <img src="./images/wallpapers/desktop/BG-03.jpg" alt="">
-                    <div class="spacer-20"></div>
-                    <div class="wallpaper-download-link">
-                        <a href="./images/wallpapers/_downloads/desktop/03_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                    <div class="desktop-wallpaper-animate" data-animate>
+                        <img src="./images/wallpapers/desktop/BG-03.jpg" alt="">
+                        <div class="spacer-20"></div>
+                        <div class="wallpaper-download-link">
+                            <a href="./images/wallpapers/_downloads/desktop/03_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                        </div>
                     </div>
                     <div class="spacer-80"></div>
-                    <img src="./images/wallpapers/desktop/BG-04.jpg" alt="">
-                    <div class="spacer-20"></div>
-                    <div class="wallpaper-download-link">
-                        <a href="./images/wallpapers/_downloads/desktop/04_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                    <div class="desktop-wallpaper-animate" data-animate>
+                        <img src="./images/wallpapers/desktop/BG-04.jpg" alt="">
+                        <div class="spacer-20"></div>
+                        <div class="wallpaper-download-link">
+                            <a href="./images/wallpapers/_downloads/desktop/04_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                        </div>
                     </div>
                     <div class="spacer-80"></div>
-                    <img src="./images/wallpapers/desktop/BG-05.jpg" alt="">
-                    <div class="spacer-20"></div>
-                    <div class="wallpaper-download-link">
-                        <a href="./images/wallpapers/_downloads/desktop/04_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                    <div class="desktop-wallpaper-animate" data-animate>
+                        <img src="./images/wallpapers/desktop/BG-05.jpg" alt="">
+                        <div class="spacer-20"></div>
+                        <div class="wallpaper-download-link">
+                            <a href="./images/wallpapers/_downloads/desktop/04_DESKTOP.png" class="download" download><span>Download <i class="icon-arrow-down"></i></span></a>
+                        </div>
                     </div>
                     <div class="spacer-140"></div>
                 </div>
@@ -92,31 +115,31 @@
         </div>
         <div class="row no-gutters d-lg-none">
             <div class="col-12">
-                <div class="mobile-ratio position-relative">
+                <div class="mobile-ratio position-relative" data-animate>
                     <div class="bg-thumb" style="background-image: url('./images/wallpapers/mobile/BG-01-PHONE.jpg')"></div>
                     <div class="download-text-container position-absolute w-100">
                         <a href="./images/wallpapers/_downloads/mobile/01_MOBILE.png" class="download" download>Download <i class="icon-arrow-down"></i></a>
                     </div>
                 </div>
-                <div class="mobile-ratio position-relative">
+                <div class="mobile-ratio position-relative" data-animate>
                     <div class="bg-thumb" style="background-image: url('./images/wallpapers/mobile/BG-02-PHONE.jpg')"></div>
                     <div class="download-text-container position-absolute w-100">
                         <a href="./images/wallpapers/_downloads/mobile/02_MOBILE.png" class="download" download>Download <i class="icon-arrow-down"></i></a>
                     </div>
                 </div>
-                <div class="mobile-ratio position-relative">
+                <div class="mobile-ratio position-relative" data-animate>
                     <div class="bg-thumb" style="background-image: url('./images/wallpapers/mobile/BG-03-PHONE.jpg')"></div>
                     <div class="download-text-container position-absolute w-100">
                         <a href="./images/wallpapers/_downloads/mobile/03_MOBILE.png" class="download" download>Download <i class="icon-arrow-down"></i></a>
                     </div>
                 </div>
-                <div class="mobile-ratio position-relative">
+                <div class="mobile-ratio position-relative" data-animate>
                     <div class="bg-thumb" style="background-image: url('./images/wallpapers/mobile/BG-04-PHONE.jpg')"></div>
                     <div class="download-text-container position-absolute w-100">
                         <a href="./images/wallpapers/_downloads/mobile/04_MOBILE.png" class="download" download>Download <i class="icon-arrow-down"></i></a>
                     </div>
                 </div>
-                <div class="mobile-ratio position-relative">
+                <div class="mobile-ratio position-relative" data-animate>
                     <div class="bg-thumb" style="background-image: url('./images/wallpapers/mobile/BG-05-PHONE.jpg')"></div>
                     <div class="download-text-container position-absolute w-100">
                         <a href="./images/wallpapers/_downloads/mobile/04_MOBILE.png" class="download" download>Download <i class="icon-arrow-down"></i></a>
@@ -126,7 +149,7 @@
         </div>
     </section>
     <footer id="footer">
-        <div class="container d-none d-lg-block">
+        <div class="container d-none d-lg-block" data-animate>
             <div class="row">
                 <div class="col-12">
                     <div class="spacer-50"></div>

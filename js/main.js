@@ -1,7 +1,13 @@
 import $ from 'jquery';
 import './app/FeaturesSlideshow';
 import './app/RevealHeader';
+import ImageLoading from './app/ImageLoading';
 import { TweenMax, morphSVG, TimelineLite } from 'gsap';
+import initSections from './app/Sections';
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    initSections('[data-animate]');
+})
 
 var step = 0;
 var canClick = false;

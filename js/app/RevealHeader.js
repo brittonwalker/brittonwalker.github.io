@@ -19,6 +19,21 @@ class RevealHeader {
 
         }));
 
+        $('.mobile-click-area').on('click', function() {
+            $('header').addClass('reveal');
+        })
+
+        var lastY;
+        $('body').on('touchmove', function (e) {
+            var currentY = e.originalEvent.touches[0].clientY;
+            if (currentY > lastY) {
+                $('header').removeClass('reveal');
+            } else if (currentY < lastY) {
+                // $('header').addClass('reveal');
+            }
+            lastY = currentY;
+        });
+
     }
 }
 new RevealHeader();

@@ -114,6 +114,8 @@ footer {
 
     img {
         width: 400px;
+        flex: 0 1 auto;
+        height: 100%;
     }
 }
 footer #mc_embed_signup {
@@ -523,4 +525,39 @@ input:focus::-webkit-input-placeholder {
             }
         }
     }
+}
+
+[data-animate] {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    -webkit-transition: 2s cubic-bezier(0.2, 1, 0.3, 1);
+    transition: 2s cubic-bezier(0.2, 1, 0.3, 1);
+    opacity: 0;
+
+    &.__animated {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header {
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #F2F2F2;
+    transition: top .3s cubic-bezier(0.2, 1, 0.3, 1);
+    padding: 0 20px;
+    top: -90px;
+    &.reveal {
+        top: 0;
+    }
+}
+
+.mobile-click-area {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 50;
 }
