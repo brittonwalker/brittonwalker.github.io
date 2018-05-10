@@ -72,23 +72,27 @@ class Slideshow {
                 return;
             }
             if (slideIndex >= 7) {
-                // $('.home-slides').off();
                 $('html, body').stop().animate({
                     scrollTop: $('#footer').offset().top
-                }, 1000);
+                }, 1000, function() {
+                    $('.home-slides').off();
+                });
             }
             if (e.originalEvent.deltaY > 0) {
                 $(this).slick('slickNext');
                 
-                if (slideIndex < 7) {
+                if (slideIndex <= 7) {
                     canScroll = false;
                     setTimeout(function () {
                         canScroll = true;
-                    }, 2000)
+                    }, 1000)
                 } else {
                     $('html, body').stop().animate({
                         scrollTop: $('#footer').offset().top
-                    }, 1000);
+                    }, 1000,
+                    function () {
+                        $('.home-slides').off();
+                    });
                 }
             }
         }
