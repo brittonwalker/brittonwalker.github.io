@@ -6,6 +6,7 @@ import { TweenMax, morphSVG, TimelineLite } from 'gsap';
 import initSections from './app/Sections';
 var innerHeight = require('ios-inner-height');
 console.log(innerHeight());
+$('.full').height( innerHeight() );
 
 document.addEventListener("DOMContentLoaded", function (event) {
     initSections('[data-animate]');
