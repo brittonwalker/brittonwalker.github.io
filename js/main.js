@@ -4,6 +4,8 @@ import './app/RevealHeader';
 import ImageLoading from './app/ImageLoading';
 import { TweenMax, morphSVG, TimelineLite } from 'gsap';
 import initSections from './app/Sections';
+var innerHeight = require('ios-inner-height');
+console.log(innerHeight());
 
 document.addEventListener("DOMContentLoaded", function (event) {
     initSections('[data-animate]');
