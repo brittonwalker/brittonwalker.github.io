@@ -114,7 +114,7 @@ $('#yo').on('click', function() {
 
         TweenMax.to($('.slide-text'), 1, {opacity: 0, y: '-50'});
         TweenMax.to($('.one-logo'), 1, {opacity: 1});
-        $('.wordmark-container').addClass('rise-up');
+        $('.index-text-wrapper').addClass('slide-up');
 
 
     }
