@@ -4,9 +4,12 @@ import './app/RevealHeader';
 import ImageLoading from './app/ImageLoading';
 import { TweenMax, morphSVG, TimelineLite } from 'gsap';
 import initSections from './app/Sections';
-var innerHeight = require('ios-inner-height');
-console.log(innerHeight());
-$('.full').height( $('#yo').height() );
+import Rellax from 'rellax';
+// var innerHeight = require('ios-inner-height');
+
+var rellax = new Rellax('.rellax', {
+    center: true
+});
 
 document.addEventListener("DOMContentLoaded", function (event) {
     initSections('[data-animate]');

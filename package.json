@@ -43,6 +43,7 @@
     "lodash": "^4.14.1",
     "lodash.assign": "^4.1.0",
     "postcss-import": "^9.1.0",
+    "rellax": "^1.6.2",
     "slick-carousel": "^1.8.1",
     "tether": "^1.4.3",
     "throttle-debounce": "^1.0.1",
