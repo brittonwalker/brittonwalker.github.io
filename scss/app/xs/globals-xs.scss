@@ -275,7 +275,7 @@ svg {
 }
 
 .text-container {
-    position: absolute;
+    // position: absolute;
     text-align: center;
     z-index: 20;
     top: 75%;
@@ -303,7 +303,7 @@ svg {
 }
 
 .word-mark-container {
-    position: absolute;
+    // position: absolute;
     bottom: 0;
     width: 100%;
     transition: transform 1s ease;
@@ -317,6 +317,7 @@ svg {
 
 .available {
     opacity: 0;
+    transition: color .3s ease-out;
 }
 
 .download-text-container {
@@ -607,3 +608,18 @@ header {
 .mobile-features {
     padding: 40px 28px;
 }
+
+.index-text-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    z-index: 100;
+    transition: all 1s ease-out;
+    /* bottom: 50%; */
+    /* transform: translateY(-50%); */
+    &.slide-up {
+        bottom: 50%;
+        transform: translateY(calc(-50% + 190px))
+    }
+}
+
