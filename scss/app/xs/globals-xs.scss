@@ -69,7 +69,6 @@ img {
 .main {
     background-color: #706D6A;
     color: #B3AFAA;
-    // min-height: 100vh;
 
     h3 {
         color: #F2F2F2;
@@ -118,13 +117,7 @@ footer {
         height: 100%;
     }
 }
-footer #mc_embed_signup {
-    // position: absolute;
-    // right: -240px;
-    // transform: rotate(90deg);
-    // transform-origin: top left;
-    // top: 40px;
-}
+
 .copyright {
     position: absolute;
     left: 0;
@@ -145,11 +138,6 @@ footer {
 
 
 svg {
-    // width: 100vw;
-    // height: 100vh;
-    // -webkit-transform: scaleX(-1) rotate(-90deg);
-    // transform: scaleX(-1) rotate(-90deg);
-    // position: absolute;
     z-index: 10;
 }
 #yo {
@@ -162,98 +150,6 @@ svg {
     overflow: hidden;
     position: relative;
 }
-
-#svg-wrapper {
-    
-    .svg-cont {
-        // position: relative;
-        // width: 100vw;
-        // height: 100vh;
-    }
-
-    svg {
-        // width: 100%;
-        // height: 100%;
-        // transform: rotate(45deg);
-        // transform-origin: center;
-    }
-}
-
-// svg {
-//     width: 150vh;
-//     height: 150vh;
-//     display: block;
-//     margin: auto;
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 50%;
-//     right: 0;
-//     transform: translateX(-50%);
-// }
-
-// circle {
-//     fill: #36b6be;
-//     transition: fill 1s ease;
-// }
-
-// .svg-wrapper.step-one circle {
-//     fill: #ffffff;
-// }
-
-// .svg-wrapper.step-two circle {
-//     fill: #DCD98B;
-// }
-
-// svg {
-//     transition: all .5s ease;
-// }
-
-// .svg-wrapper.step-two svg{
-//     transform: rotate(45deg);
-// }
-
-// .svg-wrapper.step-three svg{
-//     transform: rotate(90deg);
-// }
-
-// .svg-wrapper.step-four svg{
-//     transform: rotate(135deg);
-// }
-
-// .svg-wrapper.step-five svg{
-//     transform: rotate(180deg);
-// }
-
-// .svg-wrapper.step-six svg{
-//     transform: rotate(225deg);
-// }
-
-// .svg-wrapper.step-seven svg{
-//     transform: rotate(270deg);
-// }
-
-// .svg-wrapper.step-eight svg{
-//     transform: rotate(315deg);
-// }
-
-// .img-container {
-//     position: relative;
-// }
-// img {
-//     position: absolute;
-//     transition: all 1s ease;
-// }
-// img.fade {
-//     transform: rotate(45deg);
-//     opacity: 0;
-// }
-// .pof {
-//     position: fixed;
-//   }
-// .poa {
-//     position: absolute;
-//   }
   
 .full {
     height: 100vh;
@@ -359,31 +255,11 @@ svg {
     flex-direction: column;
 }
 
-.feature-slide {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // background-color: #706d6a;
-    // height: 100%;
-    // padding: 40px 25px;
-}
-// .features-slides {
-//     margin-top: auto; 
-//     display: flex !important;
-//     align-items: center;
-// }
-
 .one-logo-wrapper {
-    // position: absolute;
-    // bottom: 0;
-    // left: 0;
-    // width: 100%;
-    // margin-bottom: 40px;
     margin-top: auto;
 }
 
 .features-slides {
-    // margin-top: auto;
     &.no-touch {
         pointer-events: none;
     }

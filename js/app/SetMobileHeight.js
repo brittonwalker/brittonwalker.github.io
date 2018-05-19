@@ -10,6 +10,7 @@ class SetMobileHeight {
 
         $.each( $('.full'), function() {
             $(this).css( 'height', window.innerHeight );
+            console.log(window.innerHeight);
         })
 
     }
