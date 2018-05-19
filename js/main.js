@@ -7,9 +7,9 @@ import initSections from './app/Sections';
 import Rellax from 'rellax';
 // var innerHeight = require('ios-inner-height');
 
-var rellax = new Rellax('.rellax', {
-    center: true
-});
+// var rellax = new Rellax('.rellax', {
+//     center: true
+// });
 
 document.addEventListener("DOMContentLoaded", function (event) {
     initSections('[data-animate]');
