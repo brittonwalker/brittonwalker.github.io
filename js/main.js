@@ -5,6 +5,7 @@ import ImageLoading from './app/ImageLoading';
 import { TweenMax, morphSVG, TimelineLite } from 'gsap';
 import initSections from './app/Sections';
 import Rellax from 'rellax';
+import 'fullpage.js';
 // var innerHeight = require('ios-inner-height');
 
 var rellax = new Rellax('.rellax', {
@@ -14,6 +15,11 @@ var rellax = new Rellax('.rellax', {
 document.addEventListener("DOMContentLoaded", function (event) {
     initSections('[data-animate]');
 })
+
+$(document).ready(function() {
+    $('#fullpage').fullpage();
+    
+});
 
 var step = 0;
 var canClick = false;
