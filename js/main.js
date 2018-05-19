@@ -5,9 +5,7 @@ import ImageLoading from './app/ImageLoading';
 import { TweenMax, morphSVG, TimelineLite } from 'gsap';
 import initSections from './app/Sections';
 import Rellax from 'rellax';
-// var innerHeight = require('ios-inner-height');
-console.log(window.innerHeight);
-
+import SetMobileHeight from './app/SetMobileHeight';
 
 // var rellax = new Rellax('.rellax', {
 //     center: true
