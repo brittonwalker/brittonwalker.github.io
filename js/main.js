@@ -6,10 +6,14 @@ import { TweenMax, morphSVG, TimelineLite } from 'gsap';
 import initSections from './app/Sections';
 import Rellax from 'rellax';
 // var innerHeight = require('ios-inner-height');
+console.log(window.innerHeight);
+
 
 // var rellax = new Rellax('.rellax', {
 //     center: true
 // });
+
+
 
 document.addEventListener("DOMContentLoaded", function (event) {
     initSections('[data-animate]');
@@ -34,7 +38,8 @@ var $imgs = $('.testing img').toArray().reverse();
 var textArray = [
     {
         text: 'A Sensory Meditation <br>Experience',
-        color: '#3FCCD9'
+        color: '#3FCCD9',
+        logoColor: '#FAF6ED'
     },
     {
         text: 'Designed to evolve <br>with you.',
@@ -42,11 +47,13 @@ var textArray = [
     },
     {
         text: 'Sensitive to your <br>environment and intention.',
-        color: '#FF6417'
+        color: '#FF6417',
+        logoColor: '#CCFBD0'
     },
     {
         text: 'Generative sound meditations and adaptive visuals make every session unique.',
-        color: '#A09FD1'
+        color: '#A09FD1',
+        logoColor: '#BF4854'
     },
     {
         text: 'Minimal, adaptive, and evolved.',
@@ -105,7 +112,7 @@ $('#yo').on('click', function() {
         TweenMax.set($('.slide-text'), {clearProps:"all"});
         
         $('.slide-text').css('color', textArray[step].color)
-        $('.available').css('color', textArray[step].color)
+        $('.available').css('color', textArray[step].logoColor)
 
         step = step + 1;
         console.log('stepped, step = ' + step + ' out of ' + maxSteps);
@@ -114,6 +121,7 @@ $('#yo').on('click', function() {
 
         TweenMax.to($('.slide-text'), 1, {opacity: 0, y: '-50'});
         TweenMax.to($('.one-logo'), 1, {opacity: 1});
+        $('.available').css('color', '#476169')
         $('.index-text-wrapper').addClass('slide-up');
 
 
