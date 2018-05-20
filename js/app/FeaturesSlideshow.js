@@ -9,40 +9,12 @@ class Slideshow {
 
     constructor() {
 
-        var features = $('.features-slides');
-        var item_length = $('.feature-slide').length - 1;
         var dots = $('<div class="slick-dots"></div');
         var slideIndex;
 
-        $('.features-slides').slick({
-            infinite: false,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            swipe: true,
-            verticalSwiping: true,
-            arrows: false,
-        });
+        var $home = $('.home-slides');
 
-        var slides = document.getElementsByClassName('feature-slide');
-        var result = Object.keys(slides).map(function(key) {
-            return [slides[key]];
-        });
-
-        var slideCount = slides.length - 1;
-        console.log(slideCount);
-
-        $('.locked').on('click', function() {
-            // console.log(slideCount)
-            // $(slides[slideCount]).fadeOut(300, function() { 
-            //     $(this).remove();
-            //     slideCount--;
-            // });
-        })
-
-        var home = $('.home-slides');
-
-        $('.home-slides').slick({
+        $home.slick({
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -53,9 +25,7 @@ class Slideshow {
             swipe: false
         });
 
-        $('.features-slides, .home-slides').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            console.log(currentSlide);
-            console.log(nextSlide);
+        $home.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             slideIndex = nextSlide;
             $('.slick-dots').addClass(`position-${nextSlide}`);
             if (nextSlide === 7) {
@@ -69,13 +39,14 @@ class Slideshow {
         function navigateSlidesOnScroll (e) {
             e.preventDefault();
             if (canScroll === false) {
+                console.log('cant scroll');
                 return;
             }
             if (slideIndex >= 7) {
                 $('html, body').stop().animate({
                     scrollTop: $('#footer').offset().top
                 }, 1000, function() {
-                    $('.home-slides').off();
+                    $home.off();
                 });
             }
             if (e.originalEvent.deltaY > 0) {
@@ -85,19 +56,19 @@ class Slideshow {
                     canScroll = false;
                     setTimeout(function () {
                         canScroll = true;
-                    }, 1000)
+                    }, 2000)
                 } else {
                     $('html, body').stop().animate({
                         scrollTop: $('#footer').offset().top
                     }, 1000,
                     function () {
-                        $('.home-slides').off();
+                        $home.off();
                     });
                 }
             }
         }
 
-        $('.home-slides').on('wheel', navigateSlidesOnScroll);
+        $home.on('wheel', navigateSlidesOnScroll);
 
     }
 }
