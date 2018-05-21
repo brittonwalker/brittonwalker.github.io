@@ -49,26 +49,26 @@ class Homepage {
         var $imgs = $('.testing img').toArray().reverse();
 
         var textArray = [{
-                text: 'A Sensory Meditation <br>Experience',
+                text: 'A sound meditation app',
                 color: '#3FCCD9',
                 logoColor: '#FAF6ED'
             },
             {
-                text: 'Designed to evolve <br>with you.',
+                text: 'designed to harmonize sense and self.',
                 color: '#7268E3'
             },
             {
-                text: 'Sensitive to your <br>environment and intention.',
+                text: 'Responsive to your environment and conscious of your intention.',
                 color: '#FF6417',
                 logoColor: '#CCFBD0'
             },
             {
-                text: 'Generative sound meditations and adaptive visuals make every session unique.',
+                text: 'No two sessions are alike, each soundscape is generated note by note.',
                 color: '#A09FD1',
                 logoColor: '#BF4854'
             },
             {
-                text: 'Minimal, adaptive, and evolved.',
+                text: 'Minimal, adaptive, and infinite.',
                 color: '#A09FD1'
             },
         ]
