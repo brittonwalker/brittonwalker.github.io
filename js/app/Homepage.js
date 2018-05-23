@@ -104,9 +104,9 @@ class Homepage {
         var homepageSVG = document.getElementById('yo');
         var mc = new Hammer(homepageSVG);
 
-        mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-        mc.on("panleft panright panup pandown tap press", function(ev) {
-            console.log('panning')
+        mc.get('pan').set({ direction: Hammer.DIRECTION_ALL, threshold: 100 });
+        mc.on("panup", function(ev) {
+
             // Stop from clicking until animation has completed
             if (canClick === false) {
                 return;
@@ -167,8 +167,7 @@ class Homepage {
             } else {
 
                 TweenMax.to($('.slide-text'), 1, {
-                    opacity: 0,
-                    y: '-50'
+                    opacity: 1
                 });
                 TweenMax.to($('.one-logo'), 1, {
                     opacity: 1
@@ -179,12 +178,6 @@ class Homepage {
 
             }
         });
-
-        $('#yo').on('click', function () {
-
-            
-
-        })
 
     }
 }
