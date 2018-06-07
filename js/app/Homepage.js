@@ -49,26 +49,26 @@ class Homepage {
         var $imgs = $('.testing img').toArray().reverse();
 
         var textArray = [{
-                text: 'An evolved<br>sound meditation app',
+                text: 'A sound meditation app',
                 color: '#3FCCD9',
                 logoColor: '#FAF6ED'
             },
             {
-                text: 'designed to harmonize<br>sense and self.',
+                text: 'designed to harmonize sense and self.',
                 color: '#7268E3'
             },
             {
-                text: 'Responsive to your<br>environment and conscious<br>of your intention.',
+                text: 'Responsive to your environment and conscious of your intention.',
                 color: '#FF6417',
                 logoColor: '#CCFBD0'
             },
             {
-                text: 'No two sessions are alike,<br>every soundscape is<br>generated note by note.  ',
+                text: 'No two sessions are alike, each soundscape is generated note by note.',
                 color: '#A09FD1',
                 logoColor: '#BF4854'
             },
             {
-                text: 'Minimal, adaptive,<br>and infinite.',
+                text: 'Minimal, adaptive, and infinite.',
                 color: '#A09FD1'
             },
         ]
@@ -140,7 +140,13 @@ class Homepage {
                 opacity: 1,
                 y: '0'
             });
-
+            // Animate the text
+            // if ( step < 1 ) {
+            //     start;
+            // } else {
+            //     console.log('heo');
+            //     TweenMax.to('.slide-text', 1, {opacity: 0, y: '-10'}, {opacity: 1, y: '0', onComplete: setText()})
+            // }
             if (step < maxSteps) {
 
                 $('.slide-text').html(textArray[step].text)
@@ -160,10 +166,15 @@ class Homepage {
 
             } else {
 
-                TweenMax.to($('.slide-text'), 1, { opacity: 0, y: '-50' });
-                TweenMax.to($('.one-logo'), 1, { opacity: 1 });
+                TweenMax.to($('.slide-text'), 1, {
+                    opacity: 1
+                });
+                TweenMax.to($('.one-logo'), 1, {
+                    opacity: 1
+                });
                 $('.available').css('color', '#476169')
                 $('.index-text-wrapper').addClass('slide-up');
+
 
             }
         });

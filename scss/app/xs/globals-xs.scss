@@ -28,7 +28,8 @@ header {
 		padding-top: (9 / 16) * 100%;
 	}
 
-	> video {
+    > video,
+    > .desktop-video {
 		position: absolute;
 		top: 0;
 		right: 0;
