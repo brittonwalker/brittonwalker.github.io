@@ -179,6 +179,7 @@ class Homepage {
                 $('.available').css('color', '#476169')
                 $('.index-text-wrapper').addClass('slide-up');
 
+                mc.destroy();
 
             }
         });
