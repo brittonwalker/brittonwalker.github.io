@@ -23,18 +23,11 @@ $('.mobile-vid-trigger').on('click', function(e) {
     $('.mobile-vid-frame').addClass('active');
 })
 
-document.addEventListener("fullscreenchange", function() {
-    if (!document.fullscreenElement) $('.mobile-vid-frame').removeClass('active');
-  }, false);
-  
-  document.addEventListener("msfullscreenchange", function() {
-    if (!document.msFullscreenElement) $('.mobile-vid-frame').removeClass('active');
-  }, false);
-  
-  document.addEventListener("mozfullscreenchange", function() {
-    if (!document.mozFullScreen) $('.mobile-vid-frame').removeClass('active');
-  }, false);
-  
-  document.addEventListener("webkitfullscreenchange", function() {
-    if (!document.webkitIsFullScreen) $('.mobile-vid-frame').removeClass('active');
-  }, false);
+$(document).ready(function() {
+    $('.mobile-vid-trigger').on('click', function(ev) {
+   
+      $("#video")[0].src += "&autoplay=1";
+      ev.preventDefault();
+   
+    });
+  });
