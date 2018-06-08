@@ -22,11 +22,34 @@ $('.mobile-vid-trigger').on('click', function(e) {
     e.preventDefault();
 })
 
+// Inject YouTube API script
+var tag = document.createElement('script');
+tag.src = "//www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+
+function onYouTubePlayerAPIReady() {
+
+    // create the global player from the specific iframe (#video)
+    player = new YT.Player('video', {
+        events: {
+            // call this function when player is ready to use
+            'onReady': onPlayerReady
+        }
+    });
+
+    // bind events
+    var playButton = document.getElementsByClassName("mobile-vid-trigger");
+    playButton.addEventListener("click", function() {
+        player.playVideo();
+    });
+
+}
+
 $(document).ready(function() {
     $('.mobile-vid-trigger').on('click', function(ev) {
-   
-      $("#video")[0].src += "&autoplay=1";
-      ev.preventDefault();
-   
+        ev.preventDefault();
     });
-  });
+});
