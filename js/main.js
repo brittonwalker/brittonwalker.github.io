@@ -16,3 +16,9 @@ import './app/Homepage';
 document.addEventListener("DOMContentLoaded", function (event) {
     initSections('[data-animate]');
 });
+
+
+$('.mobile-vid-trigger').on('click', function(e) {
+    e.preventDefault();
+    $('.mobile-vid-frame').addClass('active');
+})
