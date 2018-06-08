@@ -18,10 +18,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 });
 
 
-// $('.mobile-vid-trigger').on('click', function(e) {
-//     e.preventDefault();
-//     $('.mobile-vid-frame').addClass('active');
-// })
+$('.mobile-vid-trigger').on('click', function(e) {
+    e.preventDefault();
+})
 
 $(document).ready(function() {
     $('.mobile-vid-trigger').on('click', function(ev) {
