@@ -9,6 +9,10 @@ class Homepage {
 
     constructor() {
 
+        if ( !$('#homepage').length ) {
+            return;
+        } 
+
         var step = 0;
         var canClick = false;
         var readyToStart = false;
@@ -167,7 +171,7 @@ class Homepage {
             } else {
 
                 TweenMax.to($('.slide-text'), 1, {
-                    opacity: 1
+                    opacity: 0
                 });
                 TweenMax.to($('.one-logo'), 1, {
                     opacity: 1
