@@ -155,7 +155,11 @@
             <iframe class="mobile-video" width="560" height="315" src="https://www.youtube.com/embed/QReEdfjUqXw?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id="video"></iframe>
     </div>
 <footer id="footer">
-    <div class="copyright">Copyright &copy;2018</div>
+    <div class="rotation-wrapper-outer copyright">
+        <div class="rotation-wrapper-inner">
+            <p class="element-to-rotate">Copyright &copy;2018</p>
+        </div>    
+    </div>
     <div class="container d-none d-lg-block" data-animate>
         <div class="row">
             <div class="col-12">
@@ -173,27 +177,33 @@
                         </a>
                     </div>
                     <!-- Begin MailChimp Signup Form -->
-                    <div id="mc_embed_signup">
-                        <form action="https://pointinpassing.us16.list-manage.com/subscribe/post?u=66456015f98bd0f539089a5fc&amp;id=bd2d22c40a" method="post"
-                            id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-                            novalidate>
-                            <div id="mc_embed_signup_scroll">
-                                <div class="mc-field-group">
-                                    <input type="email" value="" placeholder="Sign Up For Email Updates" name="EMAIL" class="required email mc-input" id="mce-EMAIL">
-                                    <button type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button">
-                                        <i class="icon-arrow-right"></i>
-                                    </button>
-                                </div>
-                                <div id="mce-responses" class="clear">
-                                    <div class="response" id="mce-error-response" style="display:none"></div>
-                                    <div class="response" id="mce-success-response" style="display:none"></div>
-                                </div>
-                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                    <input type="text" name="b_66456015f98bd0f539089a5fc_bd2d22c40a" tabindex="-1" value="">
+                    <div class="rotation-wrapper-outer mc_embed_signup">
+                        <div class="rotation-wrapper-inner">
+                            <div class="element-to-rotate-clockwise">
+                                <div id="mc_embed_signup">
+                                    <form action="https://pointinpassing.us16.list-manage.com/subscribe/post?u=66456015f98bd0f539089a5fc&amp;id=bd2d22c40a" method="post"
+                                        id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                                        novalidate>
+                                        <div id="mc_embed_signup_scroll">
+                                            <div class="mc-field-group">
+                                                <input type="email" value="" placeholder="Sign Up For Email Updates" name="EMAIL" class="required email mc-input" id="mce-EMAIL">
+                                                <button type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                                    <i class="icon-arrow-right"></i>
+                                                </button>
+                                            </div>
+                                            <div id="mce-responses" class="clear">
+                                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                                <div class="response" id="mce-success-response" style="display:none"></div>
+                                            </div>
+                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                <input type="text" name="b_66456015f98bd0f539089a5fc_bd2d22c40a" tabindex="-1" value="">
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        </form>
+                        </div>    
                     </div>
                     <!--End mc_embed_signup-->
                     <img src="./images/logos/pip/Gray_2D2C2A_PiP_LOGO.gif" alt="" class="pip-trigger">
@@ -255,8 +265,29 @@
             </div> -->
     </div>
 </footer>
-    <script src="js/app/ConicGradient.js"></script>
     <script src="js/vendor/MorphSVGPlugin.js"></script>
     <script src="assets/js/site.js"></script>
+    <script>
+        var player;
+
+function onYouTubePlayerAPIReady() {
+
+    // create the global player from the specific iframe (#video)
+    player = new YT.Player('video', {
+        events: {
+            // call this function when player is ready to use
+            'onReady': onPlayerReady
+        }
+    });
+
+    // bind events
+    var playButton = document.getElementsByClassName("mobile-vid-trigger");
+    console.log(player);
+    playButton.addEventListener("click", function() {
+        player.playVideo();
+    });
+
+}
+    </script>    
 </body>
 </html>
