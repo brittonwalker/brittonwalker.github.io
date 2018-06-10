@@ -71,10 +71,13 @@ class MobileSlideshow {
             mc.on("panleft panright panup pandown tap press", function(ev) {
                 $('.features-slides').slick('slickNext');
             });
-
-            if (nextSlide === 7) {
-                mc.destroy();
-            }
+            
+            $('.features-slides').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                slideIndex = nextSlide;
+                if (nextSlide === 7) {
+                    mc.destroy();
+                }
+            });
         }
 
     }
