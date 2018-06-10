@@ -42,6 +42,22 @@ $(document).ready( function() {
     function stopVideo() {
         player.stopVideo();
     }
+    
+    document.addEventListener("fullscreenchange", function() {
+    if (!document.fullscreenElement) $('.mobile-vid-frame').removeClass('active');
+    }, false);
+    
+    document.addEventListener("msfullscreenchange", function() {
+    if (!document.msFullscreenElement) $('.mobile-vid-frame').removeClass('active');
+    }, false);
+    
+    document.addEventListener("mozfullscreenchange", function() {
+    if (!document.mozFullScreen) $('.mobile-vid-frame').removeClass('active');
+    }, false);
+    
+    document.addEventListener("webkitfullscreenchange", function() {
+    if (!document.webkitIsFullScreen) $('.mobile-vid-frame').removeClass('active');
+    }, false);
 
     $('.mobile-vid-trigger').on('click', function(e) {
         e.preventDefault();
