@@ -65,7 +65,7 @@
     <div class="spacer-40 d-none d-lg-block"></div>
     <div class="spacer-30 d-lg-none"></div>
 </header>
-    <section class="main rellax ">
+    <section class="main ">
         <div class="pof full d-md-none">
             <div class="poa full theme-black">
                 <?xml version="1.0" encoding="utf-8"?>
@@ -120,7 +120,7 @@
                     <div class="index-desktop-wrapper">
                         <div class="spacer-40"></div>
                         <div class="video-wrapper">
-                            <iframe class="desktop-video" src="https://www.youtube.com/embed/sHtlWaBQTIU?rel=0&amp;controls=0&amp;showinfo=0?&amp;modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            <iframe class="desktop-video" src="https://www.youtube.com/embed/sHtlWaBQTIU?rel=0&amp;controls=0&amp;showinfo=0?&amp;modestbranding=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
                             <!-- <video poster="./images/02_DESKTOP.png">
                                 <source src="./videos/one-fpo.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
@@ -152,14 +152,46 @@
         </div>
     </section>
     <div class="mobile-vid-frame">
-            <iframe class="mobile-video" width="560" height="315" src="https://www.youtube.com/embed/QReEdfjUqXw?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id="video"></iframe>
+            <div id="player"></div>
+
+            <!-- <iframe class="mobile-video" width="560" height="315" src="https://www.youtube.com/embed/QReEdfjUqXw?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id="video"></iframe> -->
     </div>
 <footer id="footer">
-    <div class="rotation-wrapper-outer copyright">
+    <div class="rotation-wrapper-outer copyright d-none d-lg-block">
         <div class="rotation-wrapper-inner">
             <p class="element-to-rotate">Copyright &copy;2018</p>
         </div>    
     </div>
+    <!-- Begin MailChimp Signup Form -->
+    <div class="rotation-wrapper-outer mc_embed_signup d-none d-lg-block">
+            <div class="rotation-wrapper-inner">
+                <div class="element-to-rotate-clockwise">
+                    <div id="mc_embed_signup">
+                        <form action="https://pointinpassing.us16.list-manage.com/subscribe/post?u=66456015f98bd0f539089a5fc&amp;id=bd2d22c40a" method="post"
+                            id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+                            novalidate>
+                            <div id="mc_embed_signup_scroll">
+                                <div class="mc-field-group">
+                                    <input type="email" value="" placeholder="Sign Up For Email Updates" name="EMAIL" class="required email mc-input" id="mce-EMAIL">
+                                    <button type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                        <i class="icon-arrow-right"></i>
+                                    </button>
+                                </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_66456015f98bd0f539089a5fc_bd2d22c40a" tabindex="-1" value="">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>    
+        </div>
+        <!--End mc_embed_signup-->
     <div class="container d-none d-lg-block" data-animate>
         <div class="row">
             <div class="col-12">
@@ -176,42 +208,12 @@
                             <span>Wallpapers</span>
                         </a>
                     </div>
-                    <!-- Begin MailChimp Signup Form -->
-                    <div class="rotation-wrapper-outer mc_embed_signup">
-                        <div class="rotation-wrapper-inner">
-                            <div class="element-to-rotate-clockwise">
-                                <div id="mc_embed_signup">
-                                    <form action="https://pointinpassing.us16.list-manage.com/subscribe/post?u=66456015f98bd0f539089a5fc&amp;id=bd2d22c40a" method="post"
-                                        id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
-                                        novalidate>
-                                        <div id="mc_embed_signup_scroll">
-                                            <div class="mc-field-group">
-                                                <input type="email" value="" placeholder="Sign Up For Email Updates" name="EMAIL" class="required email mc-input" id="mce-EMAIL">
-                                                <button type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button">
-                                                    <i class="icon-arrow-right"></i>
-                                                </button>
-                                            </div>
-                                            <div id="mce-responses" class="clear">
-                                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                                <div class="response" id="mce-success-response" style="display:none"></div>
-                                            </div>
-                                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                                <input type="text" name="b_66456015f98bd0f539089a5fc_bd2d22c40a" tabindex="-1" value="">
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>    
-                    </div>
-                    <!--End mc_embed_signup-->
                     <img src="./images/logos/pip/Gray_2D2C2A_PiP_LOGO.gif" alt="" class="pip-trigger">
                 </div>
             </div>
         </div>
     </div>
-    <div class="mobile-footer-wrapper h-100 d-lg-none rellax">
+    <div class="mobile-footer-wrapper h-100 d-lg-none">
         <div class="spacer-50"></div>
         <div class="d-flex flex-column h-100">
             <div class="footer-links">
@@ -267,27 +269,50 @@
 </footer>
     <script src="js/vendor/MorphSVGPlugin.js"></script>
     <script src="assets/js/site.js"></script>
-    <script>
-        var player;
-
-function onYouTubePlayerAPIReady() {
-
-    // create the global player from the specific iframe (#video)
-    player = new YT.Player('video', {
-        events: {
-            // call this function when player is ready to use
-            'onReady': onPlayerReady
-        }
-    });
-
-    // bind events
-    var playButton = document.getElementsByClassName("mobile-vid-trigger");
-    console.log(player);
-    playButton.addEventListener("click", function() {
-        player.playVideo();
-    });
-
-}
-    </script>    
+    <!-- <script>
+            // 2. This code loads the IFrame Player API code asynchronously.
+            var tag = document.createElement('script');
+      
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+            // 3. This function creates an <iframe> (and YouTube player)
+            //    after the API code downloads.
+            var player;
+            function onYouTubeIframeAPIReady() {
+              player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                playerVars: {
+                    modestbranding: true
+                },
+                videoId: 'QReEdfjUqXw',
+                events: {
+                  'onReady': onPlayerReady,
+                  'onStateChange': onPlayerStateChange
+                }
+              });
+            }
+      
+            // 4. The API will call this function when the video player is ready.
+            function onPlayerReady(event) {
+              event.target.playVideo();
+            }
+      
+            // 5. The API calls this function when the player's state changes.
+            //    The function indicates that when playing a video (state=1),
+            //    the player should play for six seconds and then stop.
+            var done = false;
+            function onPlayerStateChange(event) {
+              if (event.data == YT.PlayerState.PLAYING && !done) {
+                setTimeout(stopVideo, 6000);
+                done = true;
+              }
+            }
+            function stopVideo() {
+              player.stopVideo();
+            }
+          </script>   -->
 </body>
 </html>
