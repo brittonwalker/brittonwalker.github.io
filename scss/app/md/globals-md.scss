@@ -7,13 +7,17 @@
     color: #B3AFAA;
 }
 
-footer #mc_embed_signup {
+footer .mc_embed_signup {
     position: absolute;
-    right: -285px;
-    transform: rotate(90deg);
-    transform-origin: top left;
+    right: 15px;
     top: 40px;
 }
 footer {
     height: 100%;
+}
+.element-to-rotate-clockwise {
+    #mc_embed_signup {
+        top: 0;
+        position: absolute
+    }
 }

@@ -9,47 +9,44 @@ import SetMobileHeight from './app/SetMobileHeight';
 import './app/MobileSlideshow';
 import './app/Homepage';
 
-// var rellax = new Rellax('.rellax', {
-//     center: true
-// });
-
 document.addEventListener("DOMContentLoaded", function (event) {
     initSections('[data-animate]');
 });
 
 
-$('.mobile-vid-trigger').on('click', function(e) {
-    e.preventDefault();
-})
-
-// Inject YouTube API script
-var tag = document.createElement('script');
-tag.src = "//www.youtube.com/player_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-var player;
-
-function onYouTubePlayerAPIReady() {
-
-    // create the global player from the specific iframe (#video)
-    player = new YT.Player('video', {
-        events: {
-            // call this function when player is ready to use
-            'onReady': onPlayerReady
-        }
+var YouTubeIframeLoader = require('youtube-iframe');
+$(document).ready( function() {
+    var player;
+    YouTubeIframeLoader.load(function(YT) {
+        player = new YT.Player('player', {
+            playerVars: {
+                modestbranding: true
+              },
+            height: '390',
+            width: '640',
+            videoId: 'QReEdfjUqXw',
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
     });
 
-    // bind events
-    var playButton = document.getElementsByClassName("mobile-vid-trigger");
-    playButton.addEventListener("click", function() {
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+    var done = false;
+    function onPlayerStateChange(event) {
+        if(event.data === 0) {          
+            $('.mobile-vid-frame').removeClass('active');
+        }        
+    }
+    function stopVideo() {
+        player.stopVideo();
+    }
+
+    $('.mobile-vid-trigger').on('click', function(e) {
+        e.preventDefault();
+        $('.mobile-vid-frame').addClass('active');
         player.playVideo();
-    });
-
-}
-
-$(document).ready(function() {
-    $('.mobile-vid-trigger').on('click', function(ev) {
-        ev.preventDefault();
-    });
-});
+    })
+})
