@@ -35,8 +35,10 @@ $(document).ready( function() {
     }
     var done = false;
     function onPlayerStateChange(event) {
-        if(event.data === 0) {          
-            $('.mobile-vid-frame').removeClass('active');
+        if(event.data === 0 || event.data === 2) {
+            setTimeout( function() {
+                $('.mobile-vid-frame').removeClass('active');
+            }, 1000)
         }        
     }
     function stopVideo() {
