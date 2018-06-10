@@ -4,7 +4,6 @@ import './app/RevealHeader';
 import ImageLoading from './app/ImageLoading';
 import { TweenMax, morphSVG, TimelineLite } from 'gsap';
 import initSections from './app/Sections';
-import Rellax from 'rellax';
 import SetMobileHeight from './app/SetMobileHeight';
 import './app/MobileSlideshow';
 import './app/Homepage';
