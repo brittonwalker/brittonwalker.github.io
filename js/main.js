@@ -36,30 +36,12 @@ $(document).ready( function() {
     var done = false;
     function onPlayerStateChange(event) {
         if(event.data === 0 || event.data === 2) {
-            setTimeout( function() {
-                $('.mobile-vid-frame').removeClass('active');
-            }, 1000)
+            $('.mobile-vid-frame').removeClass('active');
         }        
     }
     function stopVideo() {
         player.stopVideo();
     }
-    
-    document.addEventListener("fullscreenchange", function() {
-    if (!document.fullscreenElement) $('.mobile-vid-frame').removeClass('active');
-    }, false);
-    
-    document.addEventListener("msfullscreenchange", function() {
-    if (!document.msFullscreenElement) $('.mobile-vid-frame').removeClass('active');
-    }, false);
-    
-    document.addEventListener("mozfullscreenchange", function() {
-    if (!document.mozFullScreen) $('.mobile-vid-frame').removeClass('active');
-    }, false);
-    
-    document.addEventListener("webkitfullscreenchange", function() {
-    if (!document.webkitIsFullScreen) $('.mobile-vid-frame').removeClass('active');
-    }, false);
 
     $('.mobile-vid-trigger').on('click', function(e) {
         e.preventDefault();
