@@ -37,7 +37,10 @@ class MobileSlideshow {
             $('.slick-dots').addClass(`position-${nextSlide}`);
             if (nextSlide === 7) {
                 $('.locked').removeClass('locked');
+                alert('unlock')
                 $('.features-slides').addClass('no-touch');
+                console.log(mc);
+                mc.destroy();
             }
         });
 
