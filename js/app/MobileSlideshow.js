@@ -21,7 +21,6 @@ class MobileSlideshow {
             slidesToScroll: 1,
             fade: true,
             swipe: true,
-            // verticalSwiping: true,
             arrows: false,
         });
 
@@ -37,9 +36,7 @@ class MobileSlideshow {
             $('.slick-dots').addClass(`position-${nextSlide}`);
             if (nextSlide === 7) {
                 $('.locked').removeClass('locked');
-                alert('unlock')
                 $('.features-slides').addClass('no-touch');
-                console.log(mc);
                 mc.destroy();
             }
         });
@@ -74,6 +71,10 @@ class MobileSlideshow {
             mc.on("panleft panright panup pandown tap press", function(ev) {
                 $('.features-slides').slick('slickNext');
             });
+
+            if (nextSlide === 7) {
+                mc.destroy();
+            }
         }
 
     }
