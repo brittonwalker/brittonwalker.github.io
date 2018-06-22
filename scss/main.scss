@@ -42,8 +42,22 @@
 }
 
 /**
+ * Small Desktop Styles
+ */
+ @media ( min-width: 1024px ) {
+  @import 'app/tablet-landscape/**/*';
+}
+
+/**
  * Extra Large Desktop Styles
  */
 @media ( min-width: map-get( $grid-breakpoints, xl ) ) {
   @import 'app/xl/**/*';
+}
+
+/**
+ * Super Large Desktop Styles
+ */
+ @media ( min-width: 1400px ) {
+  @import 'app/xxl/**/*';
 }

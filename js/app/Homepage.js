@@ -20,27 +20,27 @@ class Homepage {
         var morphArray = [{
                 morphSVG: "M414,736l-7.411-758.368H414h307.573",
                 shapeIndex: 4,
-                fill: "#F3EDE4"
+                fill: "#f2eee5"
             },
             {
                 morphSVG: "M414,736l-7.411-758.368H414l295.574-212.991l548.971,89.996l-205.488,676.466",
                 shapeIndex: 5,
-                fill: "#FFE2CE"
+                fill: "#fce3cf"
             },
             {
                 morphSVG: "M414,736l-7.411-758.368H414l295.574-212.991l548.971,89.996l-148.651,1747.261",
                 shapeIndex: 4,
-                fill: "#CAFBD7"
+                fill: "#d2fcd7"
             },
             {
                 morphSVG: "M414,736l-7.411-758.368H414l295.574-212.991l548.971,89.996l-88.646,2032.29L-57.224,1703.908",
                 shapeIndex: 5,
-                fill: "#242130"
+                fill: "#232230"
             },
             {
                 morphSVG: "M414,736l-7.411-758.368H414l295.574-212.991l548.971,89.996l-88.646,2032.29L-57.224,1703.908 l-306.031-807.081",
                 shapeIndex: 4,
-                fill: "#242130"
+                fill: "#28222d"
             },
             {
                 morphSVG: "M414,736l-7.411-758.368H414l295.574-212.991l548.971,89.996l-88.646,2032.29L-57.224,1703.908 l-306.031-807.081c0,0-251.493-1812.179,769.843-1494.147",
@@ -53,27 +53,27 @@ class Homepage {
         var $imgs = $('.testing img').toArray().reverse();
 
         var textArray = [{
-                text: 'A sound meditation app',
+                text: 'An evolved<br>sound meditation app',
                 color: '#3FCCD9',
                 logoColor: '#FAF6ED'
             },
             {
-                text: 'designed to harmonize sense and self.',
+                text: 'designed to harmonize<br>sense and self.',
                 color: '#7268E3'
             },
             {
-                text: 'Responsive to your environment and conscious of your intention.',
+                text: 'Responsive to your<br>environment and conscious<br>of your intention.',
                 color: '#FF6417',
                 logoColor: '#CCFBD0'
             },
             {
-                text: 'No two sessions are alike, each soundscape is generated note by note.',
+                text: 'No two sessions are alike,<br>each soundscape is<br>generated note by note.',
                 color: '#A09FD1',
                 logoColor: '#BF4854'
             },
             {
-                text: 'Minimal, adaptive, and infinite.',
-                color: '#A09FD1'
+                text: 'Minimal, adaptive,<br>and infinite.',
+                color: '#5465DD'
             },
         ]
 
