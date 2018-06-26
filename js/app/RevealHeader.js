@@ -9,6 +9,11 @@ class RevealHeader {
 
     constructor() {
 
+        if ($('#homepage').length && window.innerWidth > 1024 ) {
+            console.log('Homepage Desktop');
+            return;
+        }
+
         $('body').on('wheel', (function (e) {
 
             if (e.originalEvent.deltaY < 0) {
