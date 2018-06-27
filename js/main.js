@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 var YouTubeIframeLoader = require('youtube-iframe');
 $(document).ready( function() {
 
-    if ( $('#yo').length ) {
-        $('#yo').addClass('ready');
-    }
     var player;
     YouTubeIframeLoader.load(function(YT) {
         player = new YT.Player('player', {

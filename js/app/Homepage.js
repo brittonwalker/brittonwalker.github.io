@@ -79,6 +79,7 @@ class Homepage {
 
         function myFunc() {
             canClick = true;
+            $('#yo').addClass('ready');
         }
 
         function setText() {
