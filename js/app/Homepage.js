@@ -145,13 +145,7 @@ class Homepage {
                 opacity: 1,
                 y: '0'
             });
-            // Animate the text
-            // if ( step < 1 ) {
-            //     start;
-            // } else {
-            //     console.log('heo');
-            //     TweenMax.to('.slide-text', 1, {opacity: 0, y: '-10'}, {opacity: 1, y: '0', onComplete: setText()})
-            // }
+
             if (step < maxSteps) {
 
                 $('.slide-text').html(textArray[step].text)
@@ -177,6 +171,7 @@ class Homepage {
                 TweenMax.to($('.one-logo'), 1, {
                     opacity: 1
                 });
+                $('#homepage').addClass('complete');
                 $('.available').css('color', '#476169')
                 $('.index-text-wrapper').addClass('slide-up');
 

@@ -10,7 +10,6 @@ class RevealHeader {
     constructor() {
 
         if ($('#homepage').length && window.innerWidth > 1024 ) {
-            console.log('Homepage Desktop');
             return;
         }
 
@@ -31,6 +30,12 @@ class RevealHeader {
             $('.mobile-click-area').on('click', function() {
                 $('header').addClass('reveal');
             })
+
+            if ($('#homepage').length) {
+                if (!$('#homepage').hasClass('complete') ) {
+                    return;
+                }
+            }
     
             var lastY;
             $('body').on('touchmove', function (e) {
