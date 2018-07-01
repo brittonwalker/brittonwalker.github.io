@@ -34,7 +34,7 @@ class RevealHeader {
             if (currentY > lastY) {
                 $('header').removeClass('reveal');
             } else if (currentY < lastY) {
-                // $('header').addClass('reveal');
+                $('header').addClass('reveal');
             }
             lastY = currentY;
         });
