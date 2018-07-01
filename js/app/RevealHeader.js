@@ -14,31 +14,38 @@ class RevealHeader {
             return;
         }
 
-        $('body').on('wheel', (function (e) {
+        if ( window.innerWidth >= 1024 ) {
 
-            if (e.originalEvent.deltaY < 0) {
+            $('body').on('wheel', (function (e) {
+
+                if (e.originalEvent.deltaY < 0) {
+                    $('header').addClass('reveal');
+                } else {
+                    $('header').removeClass('reveal');
+                }
+    
+            }));
+
+        } else {
+
+            $('.mobile-click-area').on('click', function() {
                 $('header').addClass('reveal');
-            } else {
-                $('header').removeClass('reveal');
-            }
+            })
+    
+            var lastY;
+            $('body').on('touchmove', function (e) {
+                var currentY = e.originalEvent.touches[0].clientY;
+                if (currentY > lastY) {
+                    $('header').removeClass('reveal');
+                } else if (currentY < lastY) {
+                    $('header').addClass('reveal');
+                }
+                lastY = currentY;
+            });
 
-        }));
-
-        $('.mobile-click-area').on('click', function() {
-            $('header').addClass('reveal');
-        })
-
-        var lastY;
-        $('body').on('touchmove', function (e) {
-            var currentY = e.originalEvent.touches[0].clientY;
-            if (currentY > lastY) {
-                $('header').removeClass('reveal');
-            } else if (currentY < lastY) {
-                $('header').addClass('reveal');
-            }
-            lastY = currentY;
-        });
+        }
 
     }
+
 }
 new RevealHeader();
