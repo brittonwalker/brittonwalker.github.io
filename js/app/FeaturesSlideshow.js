@@ -68,7 +68,7 @@ class Slideshow {
             }
         }
 
-        $home.on('wheel', navigateSlidesOnScroll);
+        $home.on('wheel click', navigateSlidesOnScroll);
 
     }
 }
