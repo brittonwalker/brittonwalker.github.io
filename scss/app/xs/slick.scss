@@ -39,6 +39,28 @@
     transform: translate3d(0, 0, 0);
 }
 
+
+.arrows-container {
+    position: relative;
+
+    .slick-prev {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .icon-arrow-right {
+            transform: rotate(180deg);
+            display: inline-block;
+        }
+    }
+    .slick-next {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+
 .slick-track {
     position: relative;
     left: 0;

@@ -12,7 +12,8 @@ class MobileSlideshow {
 
         var features = $('.features-slides');
         var item_length = $('.feature-slide').length - 1;
-        var dots = $('<div class="slick-dots"></div');
+        var leftArrow = '<div class="slick-prev"><i class="icon-arrow-right"></i></div>';
+        var rightArrow = '<div class="slick-next"><i class="icon-arrow-right"></i></div>';
         var slideIndex;
 
         $('.features-slides').slick({
@@ -21,7 +22,9 @@ class MobileSlideshow {
             slidesToScroll: 1,
             fade: true,
             swipe: true,
-            arrows: false,
+            arrows: true,
+            prevArrow: $('.arrows-container').append(leftArrow),
+            nextArrow: $('.arrows-container').append(rightArrow),
         });
 
         var slides = document.getElementsByClassName('feature-slide');

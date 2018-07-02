@@ -9,7 +9,6 @@ class Slideshow {
 
     constructor() {
 
-        var dots = $('<div class="slick-dots"></div');
         var slideIndex;
 
         var $home = $('.home-slides');
