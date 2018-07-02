@@ -456,11 +456,12 @@ header {
     width: 100%;
     z-index: 200;
     border-bottom: 1px solid #F2F2F2;
-    transition: top .3s cubic-bezier(0.2, 1, 0.3, 1);
+    transition: transform 0.3s cubic-bezier(.445,.050,.55,.95);
     padding: 0 20px;
-    top: -90px;
+    transform: translate3d(0,-100%,0);
+
     &.reveal {
-        top: 0;
+        transform: translate3d(0,0,0);
     }
 }
 
