@@ -352,6 +352,11 @@ input {
         width: 100%;
         padding-top: (16 / 9) * 100%;
     }
+    &.cropped {
+        &:before {
+            padding-top: calc((16 / 9) * 100% - 25px);
+        }   
+    }
     >.bg-thumb {
         background-size: 150%;
     }
