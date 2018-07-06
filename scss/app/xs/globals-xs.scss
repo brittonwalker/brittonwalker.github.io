@@ -2,6 +2,10 @@
 // Mobile styles
 // --------------------------------------------------
 
+html {
+    background-color: #f2f2f2;
+}
+
 body {
     font-family: 'SanFranciscoDisplay-Regular';
     background-color: $sand;
@@ -21,6 +25,15 @@ header {
             text-decoration: none;
         }
     }
+}
+
+.top-overscroll {
+    background-color: $slate;
+    position: absolute;
+    top: -100px;
+    height: 100px;
+    width: 100%;
+    z-index: 1000;
 }
 
 .video-wrapper {
