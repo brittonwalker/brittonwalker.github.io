@@ -2,13 +2,9 @@
 // Mobile styles
 // --------------------------------------------------
 
-html {
-    background-color: #f2f2f2;
-}
-
 body {
     font-family: 'SanFranciscoDisplay-Regular';
-    background-color: $sand;
+    background-color: #eae4df;
     font-size: 18px;
 }
 footer,
@@ -30,8 +26,8 @@ header {
 .top-overscroll {
     background-color: $slate;
     position: absolute;
-    top: -100px;
-    height: 100px;
+    top: -1000px;
+    height: 1000px;
     width: 100%;
     z-index: 1000;
 }
