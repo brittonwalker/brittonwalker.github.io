@@ -30,12 +30,6 @@ class RevealHeader {
             $('.mobile-click-area').on('click', function() {
                 $('header').addClass('reveal');
             })
-
-            if ($('#homepage').length) {
-                if (!$('#homepage').hasClass('complete') ) {
-                    return;
-                }
-            }
     
             var lastY;
             $('body').on('touchmove', function (e) {
@@ -43,7 +37,15 @@ class RevealHeader {
                 if (currentY > lastY) {
                     $('header').removeClass('reveal');
                 } else if (currentY < lastY) {
-                    $('header').addClass('reveal');
+
+                    var checkFeatures = $('.features-page').length && !$('.features-page').hasClass('locked');
+                    var checkHomepage = $('#homepage').length && !$('#homepage').hasClass('complete');
+                    var wallPapers = $('.wallpapers').length;
+
+                    if ( checkFeatures || checkHomepage || wallPapers) {
+                        $('header').addClass('reveal');
+                    }
+                    
                 }
                 lastY = currentY;
             });
