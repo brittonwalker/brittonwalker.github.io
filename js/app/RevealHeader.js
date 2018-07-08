@@ -39,8 +39,8 @@ class RevealHeader {
                 } else if (currentY < lastY) {
 
                     var checkFeatures = $('.features-page').length && !$('.features-page').hasClass('locked');
-                    var checkHomepage = $('#homepage').length && !$('#homepage').hasClass('complete');
-                    var wallPapers = $('.wallpapers').length;
+                    var checkHomepage = $('#homepage').length && $('#homepage').hasClass('complete');
+                    var wallPapers = $('.wallpapers').length;                    
 
                     if ( checkFeatures || checkHomepage || wallPapers) {
                         $('header').addClass('reveal');
