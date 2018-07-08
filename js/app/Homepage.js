@@ -101,7 +101,7 @@ class Homepage {
                 y: 10
             }, {
                 opacity: 1,
-                y: 0,
+                y: -10,
                 zIndex: 10,
                 onComplete: myFunc
             });
