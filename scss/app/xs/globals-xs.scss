@@ -540,7 +540,7 @@ header {
 }
 
 .mobile-features {
-    padding: 40px 28px;
+    padding: 40px 28px 0;
 
     a {
         color: #f2f2f2;
@@ -632,4 +632,36 @@ header {
        text and you want a single long vertical line of text and the pre-rotation
        width of your element is small enough that the text wraps: */
     white-space: nowrap;
+  }
+
+  .cta-arrow {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
+    transition: opacity 300ms ease;
+
+    .icon-arrow-right {
+        color: #fff;
+        -webkit-transform: rotate(90deg) translate(0px, 0px);
+        -webkit-transform-origin: 0% 0 0;
+    }
+  }
+
+  @keyframes bounce {
+    from {
+      transform: translateX(-50%) translateY(15px) rotate(-90deg);
+    }
+    to {
+      transform: translateX(-50%) translateY(0px) rotate(-90deg);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateX(-50%) translateY(15px) rotate(-90deg);
+    }
+    to {
+      transform: translateX(-50%) translateY(0px) rotate(-90deg);
+    }
   }
