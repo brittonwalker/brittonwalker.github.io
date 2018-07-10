@@ -77,8 +77,9 @@ class Homepage {
             },
         ]
 
-        function myFunc() {
+        function resetVars() {
             canClick = true;
+            $('.cta-arrow').addClass('show');
             $('#yo').addClass('ready');
         }
 
@@ -103,7 +104,7 @@ class Homepage {
                 opacity: 1,
                 y: 0,
                 zIndex: 10,
-                onComplete: myFunc
+                onComplete: resetVars
             })
             .fromTo('.cta-arrow', 1, {
                 opacity: 0
@@ -157,18 +158,13 @@ class Homepage {
 
             if (step < maxSteps) {
 
-                tl.fromTo('.cta-arrow', 1, {
-                    opacity: 1
-                }, {
-                    opacity: 0,
-                    onComplete: removeArrow
-                });
+                $('.cta-arrow').css('opacity', 0);
 
                 $('.slide-text').html(textArray[step].text)
                 TweenMax.to($('.next-slide-text'), 1, {
                     opacity: 1,
                     y: '-10',
-                    onComplete: myFunc
+                    onComplete: resetVars
                 })
                 TweenMax.set($('.slide-text'), {
                     clearProps: "all"
