@@ -21,7 +21,7 @@ class MobileSlideshow {
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: true,
-            swipe: true,
+            swipe: false,
             arrows: true,
             prevArrow: $('.arrows-container').append(leftArrow),
             nextArrow: $('.arrows-container').append(rightArrow),
@@ -70,8 +70,8 @@ class MobileSlideshow {
             var mobileSlideContainer = document.getElementById('mobile-slide-container');
             var mc = new Hammer(mobileSlideContainer);
 
-            mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-            mc.on("panleft panright panup pandown tap press", function(ev) {
+            mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+            mc.on("swipeup tap", function(ev) {
                 $('.features-slides').slick('slickNext');
             });
             
