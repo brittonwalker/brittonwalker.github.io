@@ -137,6 +137,10 @@ class Homepage {
                 });
             }
 
+            function removeArrow() {
+                $('.cta-arrow').remove();
+            }
+
             // Step through the gradient animation
             TweenMax.to('#yo #polygon', 1, morphArray[step]);
             TweenMax.to($($imgs[step]), 1, {
@@ -156,7 +160,8 @@ class Homepage {
                 tl.fromTo('.cta-arrow', 1, {
                     opacity: 1
                 }, {
-                    opacity: 0
+                    opacity: 0,
+                    onComplete: removeArrow
                 });
 
                 $('.slide-text').html(textArray[step].text)
