@@ -12,8 +12,6 @@ class MobileSlideshow {
 
         var features = $('.features-slides');
         var item_length = $('.feature-slide').length - 1;
-        var leftArrow = '<div class="slick-prev"><i class="icon-arrow-right"></i></div>';
-        var rightArrow = '<div class="slick-next"><i class="icon-arrow-right"></i></div>';
         var slideIndex;
 
         $('.features-slides').slick({
@@ -22,9 +20,8 @@ class MobileSlideshow {
             slidesToScroll: 1,
             fade: true,
             swipe: false,
-            arrows: true,
-            prevArrow: $('.arrows-container').append(leftArrow),
-            nextArrow: $('.arrows-container').append(rightArrow),
+            prevArrow: false,
+            nextArrow: false
         });
 
         var slides = document.getElementsByClassName('feature-slide');
@@ -48,6 +45,7 @@ class MobileSlideshow {
 
         function navigateSlidesOnScroll (e) {
             e.preventDefault();
+
             if (canScroll === false) {
                 return;
             }
@@ -72,6 +70,7 @@ class MobileSlideshow {
 
             mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
             mc.on("swipeup tap", function(ev) {
+                $('.cta-arrow').addClass('fade');
                 $('.features-slides').slick('slickNext');
             });
             
