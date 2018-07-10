@@ -34,11 +34,11 @@ class RevealHeader {
             var lastY;
             $('body').on('touchmove', function (e) {
                 var currentY = e.originalEvent.touches[0].clientY;
-                if (currentY > lastY) {
+                if (currentY < lastY) {
                     $('header').removeClass('reveal');
-                } else if (currentY < lastY) {
+                } else if (currentY > lastY) {
 
-                    var checkFeatures = $('.features-page').length && !$('.features-page').hasClass('locked');
+                    var checkFeatures = $('.features-page').length;
                     var checkHomepage = $('#homepage').length && $('#homepage').hasClass('complete');
                     var wallPapers = $('.wallpapers').length;                    
 
