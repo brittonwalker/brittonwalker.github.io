@@ -101,9 +101,14 @@ class Homepage {
                 y: 10
             }, {
                 opacity: 1,
-                y: -10,
+                y: 0,
                 zIndex: 10,
                 onComplete: myFunc
+            })
+            .fromTo('.cta-arrow', 1, {
+                opacity: 0
+            }, {
+                opacity: 1
             });
 
         var homepageSVG = document.getElementById('yo');
@@ -147,6 +152,12 @@ class Homepage {
             });
 
             if (step < maxSteps) {
+
+                tl.fromTo('.cta-arrow', 1, {
+                    opacity: 1
+                }, {
+                    opacity: 0
+                });
 
                 $('.slide-text').html(textArray[step].text)
                 TweenMax.to($('.next-slide-text'), 1, {
