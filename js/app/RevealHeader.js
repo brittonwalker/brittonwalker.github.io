@@ -39,7 +39,7 @@ class RevealHeader {
                 } else if (currentY > lastY) {
 
                     var checkFeatures = $('.features-page').length;
-                    var checkHomepage = $('#homepage').length && $('#homepage').hasClass('complete');
+                    var checkHomepage = $('#homepage').length;
                     var wallPapers = $('.wallpapers').length;                    
 
                     if ( checkFeatures || checkHomepage || wallPapers) {
