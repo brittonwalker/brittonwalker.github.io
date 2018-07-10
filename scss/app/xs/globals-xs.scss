@@ -222,6 +222,25 @@ svg {
     }
 }
 
+.pof {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: (666.66 / 375) * 100%;
+    }
+    .poa {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+
+
+
 .text-container {
     // position: absolute;
     text-align: center;
