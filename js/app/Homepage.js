@@ -113,7 +113,8 @@ class Homepage {
             });
 
         var homepageSVG = document.getElementById('yo');
-        var mc = new Hammer(homepageSVG);
+        var poa = document.getElementById('mobile-homepage')
+        var mc = new Hammer(poa);
 
         mc.get('pan').set({ direction: Hammer.DIRECTION_ALL, threshold: 100 });
         mc.on("panup", function(ev) {

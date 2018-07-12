@@ -652,6 +652,14 @@ header {
     white-space: nowrap;
   }
 
+  a.app-store-link {
+      pointer-events: auto;
+
+      &:hover {
+        text-decoration: none !important;
+      }
+  }
+
   .cta-arrow {
     position: absolute;
     bottom: 15px;
