@@ -84,6 +84,10 @@ header {
 header {
     top: -140px;
 
+    &.reveal {
+        transform: translateY(140px);
+    }
+
     a {
         position: relative;
 
