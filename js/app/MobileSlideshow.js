@@ -33,7 +33,11 @@ class MobileSlideshow {
 
         $('.features-slides').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             slideIndex = nextSlide;
-            $('.slick-dots').addClass(`position-${nextSlide}`);
+            if ( nextSlide > currentSlide ) {
+                $('.slick-dots').addClass(`position-${nextSlide}`); 
+            } else {
+                $('.slick-dots').removeClass(`position-${currentSlide}`); 
+            }
             if (nextSlide === 7) {
                 $('.locked').removeClass('locked');
                 $('.features-slides').addClass('no-touch');
@@ -61,6 +65,8 @@ class MobileSlideshow {
                 } else {
                     // End Slideshow Function
                 }
+            } else {
+                $(this).slick('slickPrev');
             }
         }
 
@@ -72,6 +78,10 @@ class MobileSlideshow {
             mc.on("swipeup tap", function(ev) {
                 $('.cta-arrow').addClass('fade');
                 $('.features-slides').slick('slickNext');
+            });
+
+            mc.on("swipedown tap", function(ev) {
+                $('.features-slides').slick('slickPrev');
             });
             
             $('.features-slides').on('afterChange', function (event, slick, currentSlide, nextSlide) {

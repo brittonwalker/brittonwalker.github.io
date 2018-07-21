@@ -14,7 +14,7 @@ class Slideshow {
         var $home = $('.home-slides');
 
         $home.slick({
-            infinite: true,
+            infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: true,
@@ -26,7 +26,11 @@ class Slideshow {
 
         $home.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             slideIndex = nextSlide;
-            $('.slick-dots').addClass(`position-${nextSlide}`);
+            if ( nextSlide > currentSlide ) {
+                $('.slick-dots').addClass(`position-${nextSlide}`); 
+            } else {
+                $('.slick-dots').removeClass(`position-${currentSlide}`); 
+            }
             if (nextSlide === 7) {
                 $('.locked').removeClass('locked');
                 $('.features-slides').addClass('no-touch');
@@ -64,6 +68,12 @@ class Slideshow {
                         $home.off();
                     });
                 }
+            } else {
+                $(this).slick('slickPrev');
+                canScroll = false;
+                setTimeout(function () {
+                    canScroll = true;
+                }, 2000)
             }
         }
 
